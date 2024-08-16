@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  root 'welcome#index'
+  root 'api/v1/products#index'
 
   namespace :api do
 		namespace :v1 do
