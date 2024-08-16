@@ -38,11 +38,11 @@
 #  CRUD products <a name="about-project"></a>
 
 
-**CRUD products** is a simple CRUD that allows you to create, display and delete products from a database. In this version you can attach images for easy product identification.
+**CRUD products** is a simple CRUD that allows you to create, display and delete products from a database. In this version, you can attach images for easy product identification.
  <br></br>
 
 
-This project allows you:
+This project allows you
 
 - Create products
 - Delete or modify just your products
@@ -217,7 +217,7 @@ I thank MANUABLE for considering my application for the position of junior devel
 
 - **Can I use the code of this project**
 
-  - Sure. We will be happy to collaborate on your projects. This project is MIT licensed.
+  - Sure. We will be happy to collaborate on your projects. This project is MIT-licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
