@@ -1,0 +1,8 @@
+<%= render @product %>
+
+<div>
+  <%= link_to "Edit this product", edit_api_v1_product_path(@product) %> |
+  <%= link_to "Back to products", api_v1_products_path %>
+
+  <%= button_to "Delete", api_v1_product_path(@product), method: :delete, data: { confirm: "Are you sure?" }, class: 'd-flex btn btn-sm btn-danger' %>
+</div>

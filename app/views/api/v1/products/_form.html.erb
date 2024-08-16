@@ -1,0 +1,69 @@
+<%= form_with(model: product, url: product&.persisted? ? api_v1_product_path(product) : api_v1_products_path) do |form| %>
+
+  <% if @product.errors.any? %>
+    <div class="alert alert-danger">
+      <h6><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h6>
+      <ul>
+        <% @product.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, class: 'form-label' %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= form.label :price, class: 'form-label' %>
+    <%= form.number_field :price, step: '0.10', min: '0.10', class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= form.label :is_seasonal, class: 'form-label' %>
+    <%= form.check_box :is_seasonal, class: 'form-check-input' %>
+  </div>
+
+  <div>
+    <%= form.label :image, class: 'form-label' %>
+    <%= form.file_field :image, class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= form.label :quantity, class: 'form-label' %>
+    <%= form.number_field :quantity, step: '0.10', min: '0.1', class: 'form-control' %>
+  </div>
+
+<div>
+    <%= form.label :measurement_unit, class: 'form-label' %>
+    <%= form.select :measurement_unit, options_for_select([
+      ['gms', 1],
+      ['Kgs', 2],
+      ['Piece', 3],
+      ['Lt', 4],
+      ['Lb', 5],
+      ['Oz', 6],
+      ['Other', 7]
+  ]), { include_blank: 'Select an option' }, class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= form.label :category, class: 'form-label' %>
+    <%= form.select :category, options_for_select([
+      ['Vegetables', 1],
+      ['Fruit', 2],
+      ['Meat', 3],
+      ['Dairy', 4],
+      ['Grains', 5],
+      ['Bakery', 6],
+      ['Snacks', 7],
+      ['Other', 8]
+   ]), { include_blank: 'Select an option' }, class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= form.submit class: 'btn btn-primary m-2' %>
+  </div>
+<% end %>

@@ -1,0 +1,45 @@
+<div id="<%= dom_id product %>">
+	<p>
+    <% if product.image.attached? %>
+      <%= image_tag product.image, alt: product.name, class: 'img-fluid' %>
+    <% else %>
+      <p>No image available</p>
+    <% end %>
+  </p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= product.name %>
+  </p>
+
+	<p>
+    <strong>Price:</strong>
+    <%= product.price %>
+  </p>
+
+	<p>
+    <strong>SKU:</strong>
+    <%= product.sku %>
+  </p>
+
+	<p>
+    <strong>Seasonal:</strong>
+	  <%= product.is_seasonal ? 'Yes' : 'No' %>
+  </p>
+
+  <p>
+    <strong>Quantity:</strong>
+    <%= product.quantity %>
+  </p>
+
+  <p>
+    <strong>Measurement Unit:</strong>
+    <%= product.measurement_unit %>
+  </p>
+
+	<p>
+    <strong>Category:</strong>
+    <%= product.category %>
+  </p>
+
+</div>

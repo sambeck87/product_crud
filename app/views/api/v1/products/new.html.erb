@@ -1,0 +1,8 @@
+<div class="container d-flex-justify-content-center w-50">
+  <h1>New Product</h1>
+  <%= render "form", product: @product %>
+  <br>
+  <div>
+    <%= link_to "Back to products", api_v1_products_path %>
+  </div>
+</div>

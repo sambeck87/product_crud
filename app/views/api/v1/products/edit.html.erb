@@ -1,0 +1,9 @@
+<div class="container justify-contetn-center w-50">
+  <h1>Editing Product</h1>
+  <%= render "form", product: @product %>
+  <br>
+  <div>
+    <%= link_to "Show this Product", api_v1_product_path(@product) %> |
+    <%= link_to "Back to Products", api_v1_products_path %>
+  </div>
+</div>
